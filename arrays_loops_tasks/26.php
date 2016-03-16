@@ -5,7 +5,7 @@ for ($i = 0; $i < 10; $i++) {
     $value = rand(1, 100);
     $arr[$i] = $value;
 }
-echo "Изхначальный массив: <br />";
+echo "Изхначальный массив: <br>";
 echo "<pre>";
 print_r($arr);
 echo "</pre>";
