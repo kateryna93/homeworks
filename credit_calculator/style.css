@@ -12,11 +12,3 @@ td {
     border: 1px solid lightgray;
     padding: 10px;
 }
-
-td.multiplier_1, td.multiplier_3 {
-    background-color: cornsilk;
-}
-
-td.multiplier_2 {
-    background-color: darkseagreen;
-}
