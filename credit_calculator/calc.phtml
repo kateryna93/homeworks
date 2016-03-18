@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Credit calculator</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+<div class="main">
+<form method="post">
+    <label>
+        Сумма покупки
+        <input type="number" name="purchaseCost" min="0">
+    </label>
+    <br>
+    <br>
+    <label>
+        Первоначальный взнос
+        <input type="number" name="initialFee" min="0" max="100"> %
+    </label>
+    <br>
+    <br>
+    <label>
+        Срок кредетирования
+        <input type="number" name="loanTerms">
+    </label>
+    <br>
+    <br>
+    <input type="submit" name="submit" value="Посчитать">
+</form>
+</div>
+Сумма, которую осталось оплатить без % - <?=$leftPurchaseCost?><br>
+Процентная сумма за текущий период - <?=$percentYearSum?><br>
+Количество месяцев, на протяжении которых нужно платить - <?=$monthsCount?><br>
+Помесячный платеж - <?=$monthSum?><br>
+</body>
+</html>
