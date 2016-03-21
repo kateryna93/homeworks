@@ -15,6 +15,8 @@ foreach ($result as $value) {
     $items[] = [
         'file_name' => $value,
         'file_path' => realpath($value),
+        'file_size' => filesize($value) . 'bytes',
+        'is_dir' => is_dir($value),
     ];
 }
 
