@@ -11,7 +11,7 @@ if ( isset($_FILES['file']) ) {
 $path = "uploads/"; //заходим в директорию uploads
 $uploadsFiles =  scandir($path);
 if ( false !== $uploadsFiles) {
-    $uploadsFiles = preg_grep('/\\.(?:png|gif|jpe?g)$/', $uploadsFiles);//возвращаем массив вхождений, которые шаблону поиска изображений
+    $uploadsFiles = preg_grep('/\\.(?:png|gif|jpe?g)$/', $uploadsFiles);//возвращаем массив вхождений, которые соответствуют шаблону поиска изображений
     foreach ($uploadsFiles as $key => $uploadsFile) {
             echo  "<img src='$path$uploadsFile'>";
         {
