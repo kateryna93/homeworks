@@ -12,7 +12,7 @@ function reverseString($string) {
     $count = strlen($string);
     $emptyString = '';
     for ($i = $count - 1; $i >= 0; $i--) { //переворачиваем ключи в обратном напрвлении
-        $emptyString .= $string[$i]; //за допомогою конкатенації клеїмо символи у зворотному порядку
+        $emptyString .= $string[$i];
     }
     return $emptyString;
 }
