@@ -13,7 +13,7 @@
         <?php if ($item['is_dir']) { ?>
             <li><a href="index.php?path=<?=$item['file_path'] ?>"><?= $item['file_name'] ?></a></li>
         <?php } else { ?>
-            <li><a href="#"><?= $item['file_name'] ?></a> <?=$item['file_size'] ?></li>
+            <li><a href="files.php?file=<?=$item['file_path'] ?>"><?= $item['file_name'] ?></a> <?=$item['file_size'] ?></li>
         <?php } ?>
 
     <?php } ?>
