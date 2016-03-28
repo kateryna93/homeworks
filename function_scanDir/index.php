@@ -29,3 +29,26 @@ function scanDirs($dir){
 echo '<pre>';
 print_r( scanDirs('D:\wamp\www') );
 
+
+/*2-й вариант
+
+function scanDirs($dir)
+{
+    if(!is_dir($dir))
+        return false;
+
+    static $files = array();
+
+    $dir .= substr($dir, -1) == '/' ? '' : '/';
+
+    foreach(scandir($dir) as $file)
+    {
+        if($file == '.' || $file == '..')
+            continue;
+        if(is_dir($dir . $file))
+            scanDirs($file);
+        else
+            $files[] = $file;
+    } return $files;
+}*/
+
