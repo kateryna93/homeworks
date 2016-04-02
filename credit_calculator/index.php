@@ -3,11 +3,11 @@
 $percents = [1 => 9, 2 => 11, 3 => 13, 4 => 15, 5 => 17, 6 => 19, 7 => 21,];//год => процент
 define('MAX_YEAR', 7);
 
-if ( isset($_GET['submit']) ) {
+if ( isset($_POST['submit']) ) {
 
-    $purchaseCost = $_GET['purchaseCost'];
-    $initialFeePercent = $_GET['initialFee'] / 100 * $purchaseCost;
-    $loanTerms = $_GET['loanTerms'];
+    $purchaseCost = $_POST['purchaseCost'];
+    $initialFeePercent = $_POST['initialFee'] / 100 * $purchaseCost;
+    $loanTerms = $_POST['loanTerms'];
     if ($loanTerms > MAX_YEAR) {
         echo "Кредитный период не более 7 лет";
         exit();
